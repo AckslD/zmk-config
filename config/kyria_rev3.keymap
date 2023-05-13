@@ -7,27 +7,27 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define DEFAULT = 0
-#define LOW = 1
-#define RSE = 2
-#define ADJST = 3
-#define QWRT = 4
+#define COLMK 0
+#define LOW 1
+#define RSE 2
+#define ADJST 3
+#define QWRT 4
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        DEFAULT {
+        colemak_layer {
             bindings = <
             &mo ADJST &kp Q     &kp W     &kp F     &kp P     &kp G                                                    &kp J     &kp L     &kp U     &kp Y     &kp COLON &kp BSLH
-            &mo BRKT  &kp A     &kp R     &kp S     &kp T     &kp D                                                    &kp H     &kp H     &kp E     &kp I     &kp O     &kp SQT
+            &none     &kp A     &kp R     &kp S     &kp T     &kp D                                                    &kp H     &kp H     &kp E     &kp I     &kp O     &kp SQT
             &none     &kp Z     &kp X     &kp C     &kp V     &kp B     &none     &none            &none     &tog QWRT &kp K     &kp M     &kp COMMA &kp DOT   &kp FSLH  &none
 
             &none  &lt RSE DEL &lt LOW RET &ht_bl LGUI ESC &kp LALT                                &ht_bl LCTRL BSPC &kp LSFT &lt LOW SPACE &lt RSE TAB &none
             >;
         };
 
-        LOW {
+        lower_layer {
             bindings = <
             &none     &kp EXCL  &kp AT    &kp LBRC  &kp RBRC  &kp PIPE                                                 &none     &kp UNDER &kp QMARK &none     &none     &none   
             &none     &kp HASH  &kp DLLR  &kp LPAR  &kp RPAR  &kp GRAVE                                                &kp PLUS  &kp MINUS &kp FSLH  &kp STAR  &kp SEMI  &kp DQT
@@ -37,7 +37,7 @@
             >;
         };
 
-        RSE {
+        raise_layer {
             bindings = <
             &none     &none     &kp N1    &kp N2    &kp N3    &none                                                    &none     &none     &none     &none     &none     &none   
             &none     &none     &kp N4    &kp N5    &kp N6    &kp N0                                                   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none     &none
@@ -47,7 +47,7 @@
             >;
         };
 
-        ADJST {
+        adjust_layer {
             bindings = <
             &none     &none     &kp F1    &kp F2    &kp F3    &kp F10                                                  &none     &none     &none     &none     &none     &none   
             &none     &none     &kp F4    &kp F5    &kp F6    &kp F11                                                  &kp C_PREV &kp C_PP  &kp C_MUTE&kp C_NEXT &none     &none
@@ -57,10 +57,10 @@
             >;
         };
 
-        QWRT {
+        qwerty_layer {
             bindings = <
             &mo ADJST &kp Q     &kp W     &kp E     &kp R     &kp T                                                    &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-            &mo BRKT  &kp A     &kp S     &kp D     &kp F     &kp G                                                    &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+            &none     &kp A     &kp S     &kp D     &kp F     &kp G                                                    &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
             &none     &kp Z     &kp X     &kp C     &kp V     &kp B     &none     &none            &none     &tog QWRT &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &none
 
             &none  &lt RSE DEL &lt LOW RET &ht_bl LGUI ESC &kp LALT                                &ht_bl LCTRL BSPC &kp LSFT &lt LOW SPACE &lt RSE TAB &none
