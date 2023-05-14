@@ -47,7 +47,7 @@
             bindings = <
             &mo ADJST &kp Q     &kp W     &kp F     &kp P     &kp G                                                    &kp J     &kp L     &kp U     &kp Y     &kp COLON &kp BSLH
             &none     &kp A     &kp R     &kp S     &kp T     &kp D                                                    &kp H     &kp N     &kp E     &kp I     &kp O     &kp SQT
-            &none     &kp Z     &kp X     &kp C     &kp V     &kp B     &none     &none            &none     &tog QWRT &kp K     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp UNDER
+            &none     &kp Z     &kp X     &kp C     &kp V     &kp B     &none     &none        &kp LC(LSHFT) &tog QWRT &kp K     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp UNDER
 
             &none  &ltx RSE DEL &ltx LOW RET &htx LGUI ESC &kp LALT                                &htx LCTRL BSPC &kp LSFT &ltx LOW SPACE &ltx RSE TAB &none
             >;
@@ -87,7 +87,7 @@
             bindings = <
             &mo ADJST &kp Q     &kp W     &kp E     &kp R     &kp T                                                    &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
             &none     &kp A     &kp S     &kp D     &kp F     &kp G                                                    &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
-            &none     &kp Z     &kp X     &kp C     &kp V     &kp B     &none     &none            &none     &tog QWRT &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &none
+            &none     &kp Z     &kp X     &kp C     &kp V     &kp B     &none     &none         &kp LC(LSHFT) &tog QWRT &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &none
 
             &none  &ltx RSE DEL &ltx LOW RET &htx LGUI ESC &kp LALT                                &htx LCTRL BSPC &kp LSFT &ltx LOW SPACE &ltx RSE TAB &none
             >;
