@@ -14,7 +14,8 @@
 #define QWRT 4
 
 #define TAP_TERM_MS 120
-#define QUICK_TAP_MS 200
+// TODO maybe enable but make sure everything else works first
+#define QUICK_TAP_MS 0
 #define TAP_FLAVOR "tap-preferred"
 
 / {
@@ -24,7 +25,6 @@
             label = "HOLD_TAP";
             #binding-cells = <2>;
             flavor = TAP_FLAVOR;
-            retro-tap;
             tapping-term-ms = <TAP_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             bindings = <&kp>, <&kp>;
@@ -34,7 +34,6 @@
             label = "LAYER_TAP";
             #binding-cells = <2>;
             flavor = TAP_FLAVOR;
-            retro-tap;
             tapping-term-ms = <TAP_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             bindings = <&mo>, <&kp>;
