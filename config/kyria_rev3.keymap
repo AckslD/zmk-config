@@ -15,14 +15,23 @@
 
 / {
     behaviors {
-        ht_bl: hold_tap_balanced {
+        htx: hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "BALANCED_HOLD_TAP";
+            label = "HOLD_TAP";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
+            tapping-term-ms = <120>;
+            quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
+        };
+        ltx: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <120>;
+            quick-tap-ms = <200>;
+            bindings = <&mo>, <&kp>;
         };
     };
 
@@ -33,9 +42,9 @@
             bindings = <
             &mo ADJST &kp Q     &kp W     &kp F     &kp P     &kp G                                                    &kp J     &kp L     &kp U     &kp Y     &kp COLON &kp BSLH
             &none     &kp A     &kp R     &kp S     &kp T     &kp D                                                    &kp H     &kp N     &kp E     &kp I     &kp O     &kp SQT
-            &none     &kp Z     &kp X     &kp C     &kp V     &kp B     &none     &none            &none     &tog QWRT &kp K     &kp M     &kp COMMA &kp DOT   &kp FSLH  &none
+            &none     &kp Z     &kp X     &kp C     &kp V     &kp B     &none     &none            &none     &tog QWRT &kp K     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp UNDER
 
-            &none  &lt RSE DEL &lt LOW RET &ht_bl LGUI ESC &kp LALT                                &ht_bl LCTRL BSPC &kp LSFT &lt LOW SPACE &lt RSE TAB &none
+            &none  &ltx RSE DEL &ltx LOW RET &htx LGUI ESC &kp LALT                                &htx LCTRL BSPC &kp LSFT &ltx LOW SPACE &ltx RSE TAB &none
             >;
         };
 
@@ -75,7 +84,7 @@
             &none     &kp A     &kp S     &kp D     &kp F     &kp G                                                    &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
             &none     &kp Z     &kp X     &kp C     &kp V     &kp B     &none     &none            &none     &tog QWRT &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &none
 
-            &none  &lt RSE DEL &lt LOW RET &ht_bl LGUI ESC &kp LALT                                &ht_bl LCTRL BSPC &kp LSFT &lt LOW SPACE &lt RSE TAB &none
+            &none  &ltx RSE DEL &ltx LOW RET &htx LGUI ESC &kp LALT                                &htx LCTRL BSPC &kp LSFT &ltx LOW SPACE &ltx RSE TAB &none
             >;
         };
     };
